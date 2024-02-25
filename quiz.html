@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Quiz</title>
+    <link rel="stylesheet" type="text/css" href="quiz.css">
+</head>
+<body>
+    <div class="mainWrapper">
+        <div class="header">Quiz</div>
+        <div class="content" id="content_El">
+            <div class="statusAreaWrapper" id="statusAreaWrapper_El">
+                <div class="statusAreaContainer">
+                    <div class="statusArea">
+                        <ul class="qAList" id="qAList_El"></ul>
+                    </div>
+                </div>
+            </div>
+            <div class="formWrapper" id="formWrapper_El">
+                <div class="formContainer">
+                    <form id="form_El">
+                        <div class="allQ" id="allQ-El"></div>
+                        <div class="currentQ" id="currentQ-El"></div>
+                        <div class="radioButtonHolder">
+                            <input type="radio" name="option" id="radio1_El">
+                            <label for="radio1_El" class="radioLabel" id="option1_El"></label>
+                        </div>
+                        <div class="radioButtonHolder">
+                            <input type="radio" name="option" id="radio2_El">
+                            <label for="radio2_El" class="radioLabel" id="option2_El"></label>
+                        </div>
+                        <div class="radioButtonHolder">
+                            <input type="radio" name="option" id="radio3_El">
+                            <label for="radio3_El" class="radioLabel" id="option3_El"></label>
+                        </div>
+                        <div class="radioButtonHolder">
+                            <input type="radio" name="option" id="radio4_El">
+                            <label for="radio4_El" class="radioLabel" id="option4_El"></label>
+                        </div>
+                        <div class="buttonHolder">
+                            <button type="button" class="button" id="lastButton_El">Previous</button>
+                            <button type="button" class="button" id="nextButton_El">Select an answer</button>
+                        </div>
+                    </form>
+                    <div class="endMessage" id="endMessage_El">
+                        <h1 class="message" id="message_El"></h1>
+                        <button type="button" class="button restartButton" id="restartButton_El">Restart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="checkBoxHolder">
+                <input type="checkbox" checked="checked" name="checkbox" id="checkbox_El">
+                <label for="checkbox_El" class="checkboxLabel" id="checkboxLabel_El">Show answered questions</label>
+            </div>
+        </div>
+        <div class="footer">
+            <a href="index.html">HOME</a>
+        </div>
+    </div>
+    <script src="quiz.js"></script>
+</body>
+
+</html>

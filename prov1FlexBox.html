@@ -1,0 +1,242 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <!--Oscar Burman Februari 2024-->
+    <title>Flexbox</title>
+    <link rel="stylesheet" href="prov1FlexBox.css">
+</head>
+<div class="topBar bar">
+    <div class="subHeaderWrapper topHeader">Provuppgift 1 - Flexbox</div>
+</div>
+<div class="mainWrapper">
+    <div class="headerArea">
+
+    </div>
+    <div class="contentArea">
+        <div class="textWrapper">
+            <div class="linkContainer">
+                <a href="https://webbling.se/index.php?title=Flexbox_-_s%C3%A4tta_storlek" target="_blank">Webbling</a>
+                <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/" target="_blank">CSS tricks</a>
+                <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox" target="_blank">MdnWebDocs</a>
+                <a href="https://www.w3schools.com/css/css3_flexbox.asp" target="_blank">W3schools</a>
+                <a href="https://web.dev/learn/css/flexbox" target="_blank">Webdev</a>
+                <a href="https://www.youtube.com/watch?v=fYq5PXgSsbE" target="_blank">Webdev Simplified</a>
+                <a href="https://www.youtube.com/watch?v=GteJWhCikCk" target="_blank">Bro code</a>
+            </div>
+            <div class="textContainer">
+                <h1 class="contentMainHeader">Introduktion till Flexbox</h1>
+                <div class="illustrationWrapper">
+                    <div class="flexEx0Container" data-flex="Med flex">
+                        <div class="flexItemEx0">1</div>
+                        <div class="flexItemEx0">2</div>
+                        <div class="flexItemEx0">3</div>
+                    </div>
+                    <div class="noneFlexConatiner" data-flex="Utan flex">
+                        <div class="noneFlexItemEx0">1</div>
+                        <div class="noneFlexItemEx0">2</div>
+                        <div class="noneFlexItemEx0">3</div>
+                    </div>
+                    <p class="summary">Flexbox är ett modernt sätt att skapa olika layouter på webbsidor. Implementering
+                        av flexbox underlättar i många problem, dels vad gäller hur element kan centeras horisontellt
+                        och vertikalt. Flexbox erbjuder även möjlighet till att skapa kolumner eller rader med samma
+                        dimensioner, beroende på i vilket led Flexbox tillämpas. Trots att den här tekniken efterliknar
+                        Gird så skiljer den sig i den anmärkningen att Flexbox endast kan användas i en riktning, medan
+                        Gird kan avnvändas för att skapa tvådimensionella layouter. Denna layout-modell bygger på att en
+                        container med under-element (children) ges en så kallad "display-property" av "display: flex".
+                        Ordet Flexbox syftar till hantering en container på ett flexibelt sätt. Vilket kan ses när
+                        Flexbox används för att skapa responsiva layouter där innehållet i en container skalas efter
+                        containerns storlek. </p>
+                </div>
+                <h1 class="contentHeader">Flexaxel</h1>
+                <p class="text">Flexaxlen anger vilken riktning som elementen placeras i. Det alternativ som finns att
+                    tillgå är "row" eller "column" och detta sätts med "flex-direction". Dessa värden kan även
+                    kombineras med "-reverse" för att arrangera flex-elementen i motsatt ordning. Värdet "column"
+                    placerar elementen vertikalt medan "row" arrangerar dem horisontellt.</p>
+                <div class="codeContainer">
+                    <pre>
+                            <code>
+                                .parent{
+                                    <nobr>flex&hyphen;direction:</nobr> column;
+                                }
+                            </code>
+                        </pre>
+                    <pre>
+                            <code>
+                                .parent{
+                                    <nobr>flex&hyphen;direction:</nobr> <nobr>column&hyphen;reverse;</nobr>
+                                }
+                            </code>
+                        </pre>
+                    <pre>
+                            <code>
+                                .parent{
+                                    <nobr>flex&hyphen;direction:</nobr> row;
+                                }
+                            </code>
+                        </pre>
+                    <pre>
+                            <code>
+                                .parent{
+                                    <nobr>flex&hyphen;direction:</nobr> <nobr>row&hyphen;reverse;</nobr>
+                                }
+                            </code>
+                        </pre>
+                </div>
+                <div class="flexEx1Wrapper">
+                    <div class="flexEx1Container1 flexContainer1" data-direction="column">
+                        <div class="flexItem">1</div>
+                        <div class="flexItem">2</div>
+                        <div class="flexItem">3</div>
+                    </div>
+                    <div class="flexEx1Container2 flexContainer1" data-direction="column-reverse">
+                        <div class="flexItem">1</div>
+                        <div class="flexItem">2</div>
+                        <div class="flexItem">3</div>
+                    </div>
+                    <div class="flexEx1Container3 flexContainer1" data-direction="row">
+                        <div class="flexItem">1</div>
+                        <div class="flexItem">2</div>
+                        <div class="flexItem">3</div>
+                    </div>
+                    <div class="flexEx1Container4 flexContainer1" data-direction="row-reverse">
+                        <div class="flexItem">1</div>
+                        <div class="flexItem">2</div>
+                        <div class="flexItem">3</div>
+                    </div>
+                </div>
+                <h3 class="contentSubHeader">Huvudaxel</h3>
+                <p class="text">Huvudaxeln anger den primära riktningen som flex-elementen anpassa efter, som till
+                    exempel horisontellt eller vertikalt.
+                    Denna axels riktning bestämms med kommandot "flex-direction".</p>
+                <h3 class="contentSubHeader">Korsaxel</h3>
+                <div class="text">Det som menas med korsaxel är den axeln som ligger i motsatt riktning och är
+                    förskjuten 90 grader jämfört med huvudaxel. Det vill säga att om huvudaxeln är vertikallt är
+                    korsaxeln horisontel och vice versa. Tanken med korsaxeln är att kunna justera element i motsatt
+                    riktning med huvudaxeln.</div>
+                <h1 class="contentHeader">Justering kring huvudaxeln</h1>
+                <h3 class="contentSubHeader">Justify-content</h3>
+                <p class="text">Egenskapen "justify-content" används för att justera element längs huvudaxeln i en
+                    flexbehållare. De alternativen som finns för "justify-content" är "flex-start", "flex-end",
+                    "center", "space-between", "space-around", "space-evenly", "start", "end" och "stretch"</p>
+                <h3 class="contentSubHeader">Flex-start</h3>
+                <p class="text">"Flex-start" placerar elementen i början av axeln. Beroende på om axeln ligger
+                    horisontellt placeras elementen så långt åt vänster som möjligt, annars i topen av flexbehållaren.
+                </p>
+                <h3 class="contentSubHeader">Flex-end</h3>
+                <p class="text">"Flex-end" placerar elementen i slutet av axeln. Beroende på om axeln ligger
+                    horisontellt placeras elementen så långt åt höger som möjligt, annars i botten av flexbehållaren.
+                </p>
+                <h3 class="contentSubHeader">Center</h3>
+                <p class="text">Värdet "center" används för att centera element längs axeln.</p>
+                <h3 class="contentSubHeader">Space-between</h3>
+                <p class="text">"Space-between" placerar elementen med ett jämnt mellanrum mellan varje element men inte
+                    till kanterna av flexbehållaren.</p>
+                <h3 class="contentSubHeader">Space-around</h3>
+                <p class="text">Detta värde sprider ut flex-elementen med lika mycket runt elementen inklusive till
+                    kanterna.</p>
+                <h3 class="contentSubHeader">Space-evenly</h3>
+                <p class="text">"Space-evenly" fördelar det tillgänliga utrymmet så att det ska vara exakt lika mycket
+                    mellan varje sektion i flexbehållaren, det vill säga mellan elementen och till kanterna.</p>
+                <h3 class="contentSubHeader">Start och End</h3>
+                <p class="text">Värden placerar elementen i början eller slutet av flexbehållaren baserat på
+                    textriktningen i behållaren. Om texten exempelvis börjar till vänster kan "start" användas för att
+                    sätta elementen i samma riktning, medan "end" placerar elementen från slutet av den aktuella
+                    textriktningen. Värdena "start" och "end" liknar "flex-start" och "flex-end", men förhåller sig till
+                    hur text i en behållare skrivs. Något som kan vara användbart på webbsidor med internationella
+                    användare för att hantera olika språk och textriktningar.</p>
+                <h3 class="contentSubHeader">Stretch</h3>
+                <p class="text">Det här läget kommer elementen att uppta hela flexbehållarens storlek längs den angivna
+                    axeln.</p>
+                <h3 class="contentSubHeader">Baseline</h3>
+                <p class="text">"Baseline" syftar till att anpassa element efter baslinjen av text i ett flex-element.
+                    Texten i de olika elementen kommer att hamna i samma höjd. "Baseline" kan även användas som
+                    "first-basline" eller "last-baseline" för att placera element efter den första eller sista baslinjen
+                    av text i en behållare.</p>
+                <h1 class="contentHeader">Justering kring korsaxeln</h1>
+                <h3 class="contentSubHeader">Align-items</h3>
+                <p class="text">Detta är egenskapen för att ange hur elementen ska vara anpassad till korsaxeln. De
+                    värden som finns till "align-items" är bland annant "flex-start", "flex-end", "center", "baseline",
+                    "start", "end" och "stretch". Egenskapen "align-items" har många gemensamma värden med
+                    "justify-content", men saknar "Space-between", "Space-around" och "Space-evenly". Standardvärdet för
+                    "align-items" är "stretch", vilket låter elementen utnyttja hela det tillgänliga utrymmet. </p>
+                <h1 class="contentHeader">Anpassning av enskilda element</h1>
+                <h3 class="contentSubHeader">Align-self</h3>
+                <p class="text">Egenskapen "Align-self" kan användas för att justera enskilda element i en flexbehållare
+                    mot korsaxel. De alternativ som finns att tillgå är "flex-start", "flex-end" "center", "baseline"
+                    och "stretch". För att exemplifiera, placerar "flex-start" elementet i början av det tillgänliga
+                    utrymmet, medan "stretch" upptar hela utrymmet.</p>
+                <h1 class="contentHeader">Hantering av flera rader eller kolumner</h1>
+                <h3 class="contentSubHeader">Align-content</h3>
+                <p class="text">Trots att flexbox inte handlar om att skapa tvådimensionella layouter kan flexbox
+                    resultera i en uppsättning av element i flera rader eller kolumner. Detta händer när flexbehållarens
+                    storlek inte rymmer alla flex-element i en riktning och då anpassa elementen till exempelvis två
+                    rader. I fall att det här händer kan "align-content" vara användbart för att positionera hela
+                    innehållet i en behållare. I och med att denna egenskap är väldigt lik "align-items" har den även
+                    samma värden, däribland "space-around", "space-evenly" och "stretch".</p>
+                <h1 class="contentHeader">Flexordning</h1>
+                <h3 class="contentSubHeader">Order</h3>
+                <p class="text">Egenskapen "order" kan användas i en flexbehållare för att ändra ordningen på
+                    flex-elementen utan att ändra strukturen i html. För att "order" ska fungera i en flexbehållare
+                    måste det sättas på enskilda element där ett lägre värdet placeras före ett högre. Däremot är detta
+                    något som bör undvikas, främst av den anledningen att de som använder en skärmläsare får problem när
+                    ordningen av html-element är ändrat i css.</p>
+                <h1 class="contentHeader">Flex-wrap</h1>
+                <p class="text">Anger vad som ska hända med elementen i en flexbehållare om det inte finns tillräckligt
+                    med plats för att elementen ska kunna ligga på en rad eller kolumn.</p>
+                <h3 class="contentSubHeader">Nowwrap</h3>
+                <p class="text">Standardvärde för flex-wrap som endast tillåter att elementen placeras i en rad eller
+                    kolumn beroende på huvudaxelns riktning.</p>
+                <h3 class="contentSubHeader">Wrap</h3>
+                <p class="text">"Wrap" används för att tillåta element i en flexbehållare att finnas på mer en en rad
+                    eller kolumn om det skulle behövs beroende på behållarens storlek.</p>
+                <h3 class="contentSubHeader">Wrap-reverse</h3>
+                <p class="text">Det här alternativt fungerar på samma sätt som "wrap", men i motsatt ordning.
+                    "Wrap-reverse" vänder på ordningen av flex-elementen när flexbehållarens storlek krymper till att
+                    elementen inte får plats på en rad eller kolumn. </p>
+                <h1 class="contentHeader">Flex-grow</h1>
+                <p class="text">Bestämmer hur mycket av det extra utrymmet ett flex-element får ta upp relativt till de
+                    övriga elementen i behållaren när det finns överblivet utrymme längs huvudaxeln. "Flex-grow" anges
+                    med ett heltal och representar hur mycket ett element tillåts växa i en flexbehållare. Ju högre
+                    "flex-grow"-värde desto mer kommer elementet att växa jämfört med de övriga elementen i behållaren
+                    när dess storlek ändras.</p>
+                <h1 class="contentHeader">Flex-shrink</h1>
+                <p class="text">Den här egenskapen är motsatsen till "Flex-shrink" och anger hur mycket ett specifikt
+                    element tillåts krympa relativt till dess syskon-element i behållaren när det inte finns
+                    tillräckligt med utrymme längs huvudaxeln. Egenskapen anges med ett heltal och ett stort värde leder
+                    till att elementet krymper snabbre än andra element i flexbehållaren.</p>
+                <h1 class="contentHeader">Flex-basis</h1>
+                <p class="text">Egenskapen "flex-basis" kan appliceras på ett enskilt element för att bestäma dess
+                    initiala storlek längs huvudaxeln. "Flex-basis" sätts före "flex-grow" och flex-"shrink" och på så
+                    sätt innan eventuell tillväxt eller krympning påverkar storleken. Det är bra att använda sig av
+                    "flex-basis" för att det sätter en initial storlek på elementet och skalar det när flexbehållarens
+                    proportioner ändras. </p>
+                <h1 class="contentHeader">Flex</h1>
+                <p class="text">Detta är ett kortkommando för "flex-grow", "flex-shrink" samt "flex-basis" och anges med
+                    tre heltal i den skrivna ordningen. Andvändning av "Flex"-kommandot gör så att koden kan skrivas med
+                    kompakt och är därför en poplär egenskap inom flexbox-hantering.</p>
+            </div>
+        </div>
+    </div>
+    <div class="footerArea">
+
+    </div>
+</div>
+<div class="bottomBar bar">
+    <div class="subHeaderWrapper">
+        <h1 class="subHeader">Oscar Burman</h1>
+    </div>
+    <div class="subHeaderWrapper">
+        <h1 class="subHeader">Te21</h1>
+    </div>
+    <div class="subHeaderWrapper">
+        <h1 class="subHeader">Februari 2024</h1>
+    </div>
+    <a class="subHeaderWrapper" href="../index.html">Index</a>
+</div>
+
+<body>
+</body>
+
+</html>

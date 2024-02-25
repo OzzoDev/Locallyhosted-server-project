@@ -1,0 +1,38 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: url(bg1.svg);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+.navbar{
+    position: fixed;
+    bottom: 0;
+    padding: 20px;
+    background:linear-gradient(120deg,#4B7489,#4D8DA5, #4BA6C0, #46C0D9);
+    width: 100vw;
+    display: flex;
+    justify-content:space-evenly;
+    align-items: center;
+}
+.navbar a{
+    text-decoration: none;
+    font-size: 3rem;
+    font-weight: bold;
+    color: #42525F;
+}
+@media screen and (orientation: portrait) {
+    body{
+        background: url(bg2.svg);
+        background-attachment: fixed;
+        background-position: center;
+        background-size: cover; 
+    }
+}

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Local Webpage</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<div class="navbar">
+    <a href="quiz.html">Quiz</a>
+    <a href="prov1FlexBox.html">Flexbox tutorial</a>
+</div>
+
+<script src="/socket.io/socket.io.js"></script>
+<script>
+  const socket = io();
+  socket.on('reload', () => {
+    console.log('Reloading page...');
+    location.reload();
+  });
+</script>
+</body>  
+</body>
+</html>
